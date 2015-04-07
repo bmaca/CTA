@@ -9,8 +9,8 @@ f.close()
 
 doc = parse('rt22.xml')
 
-latitude = 41.98062
-longitude = -87.668452
+latitude = 41.879875
+longitude = -87.628833
 
 for bus in doc.findall('bus'):
 	lat = float(bus.findtext('lat'))
