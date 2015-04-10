@@ -25,10 +25,11 @@ def monitor_bus():
 
 print '*' *10
 
+#added 8 for the typical 8 hour word day. 
 stop = 8
 		
 while stop >0:
 	monitor_bus()
-	time.sleep(1)
+	time.sleep(60)
 
 	stop = stop -1
