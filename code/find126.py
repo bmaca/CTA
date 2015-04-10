@@ -25,7 +25,7 @@ def monitor_bus():
 
 print '*' *10
 
-#added 8 for the typical 8 hour word day. 
+#added 8 for the typical 8 hour work day. 
 stop = 8
 		
 while stop >0:
