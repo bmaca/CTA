@@ -20,7 +20,7 @@ def monitor_bus():
 			direction = bus.findtext('d')
 			if direction.startswith('West'):
 				busid = bus.findtext('id')
-			print "BudId:",busid
+			print "BusId:",busid
 			print "long:", lon
 
 print '*' *10
