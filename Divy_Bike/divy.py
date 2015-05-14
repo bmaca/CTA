@@ -1,9 +1,14 @@
 import requests
 import json
+from datetime import datetime
+
 
 url = 'http://www.divvybikes.com/stations/json'
 response = requests.get(url)
 json_object = response.json()
+
+time_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+print time_date
 
 print '----------------'
 
