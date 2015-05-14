@@ -1,6 +1,6 @@
-CLI to fetch latest information for two divy bike stations in Chicago.
+CLI to fetch latest information for two divvy bike stations in Chicago.
 ---------
-I wrote a little program that will fetch me the closest divy bike stations from work, and from the train station for me.
+I wrote a little program that will fetch me the closest divvy bike stations from work, and from the train station for me.
 
 Recommended Modules
 --------
