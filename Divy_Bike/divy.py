@@ -22,6 +22,7 @@ def fetch_bikes_sprout():
                 print ('Total Docks: {0}'.format(data['totalDocks']))
                 print ('Available Docks: {0}'.format(data['availableDocks']))
                 print ('Available Bikes: {0}'.format( data['availableBikes']))
+                print ('In Service: {0}' .format( data['statusValue']))
                 continue
 
 def fetch_bikes_train():
@@ -34,6 +35,7 @@ def fetch_bikes_train():
                 print ('Total Docks: {0}'.format(data['totalDocks']))
                 print ('Available Docks: {0}'.format(data['availableDocks']))
                 print ('Available Bikes: {0}'.format( data['availableBikes']))
+                print ('In Service: {0}' .format( data['statusValue']))
                 continue
 
 def fetch_another_closer_route():
@@ -46,6 +48,7 @@ def fetch_another_closer_route():
                 print ('Total Docks: {0}'.format(data['totalDocks']))
                 print ('Available Docks: {0}'.format(data['availableDocks']))
                 print ('Available Bikes: {0}'.format( data['availableBikes']))
+                print ('In Service: {0}' .format( data['statusValue']))
                 continue
 
 
