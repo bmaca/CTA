@@ -1,7 +1,8 @@
 import requests
 import json
 from datetime import datetime
-
+import sys
+import logging
 
 url = 'http://www.divvybikes.com/stations/json'
 response = requests.get(url)
@@ -14,12 +15,19 @@ print "DATE        TIME"
 print time_date
 print "-" * 20
 
-def station_info(station_id):
+# handle error handling if user doesnt pass in an argument
+if len(sys.argv) != 2:
+    logging.error("Must provide a street address as an argument in order for the program to work")
+    sys.exit(1)
+
+station_address = sys.argv[1]
+
+def station_info(station_address):
     if json_object['stationBeanList'] == []:
         print 'I am sorry there is no data.'
     else:
         for data in json_object['stationBeanList']:
-            if data['id'] == station_id:
+            if data['stAddress1'] == station_address:
                 print ('Street Address: {0}'.format(data['stAddress1']))
                 print ('Total Docks: {0}'.format(data['totalDocks']))
                 print ('Available Docks: {0}'.format(data['availableDocks']))
@@ -29,11 +37,6 @@ def station_info(station_id):
                 
 if __name__ == '__main__':
     print "-" * 20
-    station_info(37)
+    station_info(station_address)
     print "-" * 20
-    station_info(192)
-    print "-" * 20
-    station_info(49)
-
-    
-    
+logger = logging.getLogger(__name__)
