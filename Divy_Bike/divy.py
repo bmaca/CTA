@@ -33,6 +33,8 @@ def station_info(station_address):
                 print ('Available Docks: {0}'.format(data['availableDocks']))
                 print ('Available Bikes: {0}'.format( data['availableBikes']))
                 print ('In Service: {0}'.format( data['statusValue']))
+            else:
+                pass
 
                 
 if __name__ == '__main__':
