@@ -4,9 +4,12 @@ from datetime import datetime
 import sys
 import logging
 
-url = 'http://www.divvybikes.com/stations/json'
-response = requests.get(url)
-json_object = response.json()
+try:
+    url = 'http://www.divvybikes.com/stations/json'
+    response = requests.get(url)
+    json_object = response.json()
+except requests.exceptions.RequestException as e:
+    print e
 
 time_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
